@@ -1,4 +1,4 @@
-FROM asans/nodejs:0.10.15
+FROM node:0.10.36
 
 RUN npm install -g hubot coffee-script yo generator-hubot
 RUN mkdir -p hubot && yo hubot
