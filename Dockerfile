@@ -1,7 +1,7 @@
 FROM asans/nodejs:0.10.15
 
-RUN npm install -g hubot coffee-script
-RUN hubot --create hubot
+RUN npm install -g hubot coffee-script yo generator-hubot
+RUN mkdir -p hubot && yo hubot
 RUN echo "[]" > hubot/hubot-scripts.json
 RUN apt-get install -y git
 RUN cd hubot && npm install hubot-irc --save && npm install
